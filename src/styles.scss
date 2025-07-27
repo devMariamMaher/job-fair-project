@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root{
+  --main-color: #2563EB !important;
+}
+
+body {
+  font-family: var(--font-family) !important;
+}
+
+.container{
+  @apply w-[90%] mx-auto;
+}
+
+.product{
+  transition: box-shadow 0.3s;
+  &:hover{
+    box-shadow: 0 0 10px gray;
+  }
+}
+
+.sectionTitle{
+  @apply font-semibold text-2xl capitalize
+}
+
+.toastStyle{
+  width: fit-content;
+  padding: 15px;
+  margin-block: 10px;
+  border-radius: 10px;
+  color: white;
+  z-index: 1000;
+}
+
+.toastPosition{
+  position: fixed;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ngx-toastr{
+  border-radius: 16px !important;
+}
